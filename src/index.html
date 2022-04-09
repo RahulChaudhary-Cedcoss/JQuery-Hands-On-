@@ -8,46 +8,34 @@
     <title>JQuery Hands-On</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
+        button {
+            margin-top: 20px;
+        }
     </style>
 </head>
-<script>
-    $(document).ready(function(){ 
-        $('#button1').click(function(){
-            $('#r1').remove();
-        });
-    $('#button2').click(function(){ 
-     $('#r2').remove(); 
-     });
-     $('#button3').click(function(){ 
-     $('#r3').remove(); 
-     });
-  });
-    
-</script>
 
-<body>
-   <table>
-    <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Delete Section</th>
-        </tr>
-        <tr id="r1">
-        <td>Data</td>
-        <td>1</td>
-        <td><input id="button1" type="button" value="Delete Row 1" /></td>
-        </tr>
-        <tr id="r2">
-         <td>Data</td>
-         <td>2</td>
-         <td><input id="button2" type="button" value="Delete Row 2" /></td>
-         </tr>
-         <tr id="r3">
-          <td>Data</td>
-          <td>3</td>
-          <td><input id="button3" type="button" value="Delete Row 3" /></td>
-          </tr>
-   </table>
-</body>
+    <body style="text-align:center;" id="body">
+    
+        <input type="checkbox" name="type" value="Element 1" /> Element 1:
+        <input type="checkbox" name="type" value="Element 2" /> Element 2:
+        <input type="checkbox" name="type" value="Element 3" /> Element 3:
+        <input type="checkbox" name="type" value="Element 4" />Element 4:
+        <br>
+        <button>
+            click me
+        </button>
+        <p id="display">
+        </p>
+        <script>
+    
+            $('button').on('click', function() {
+                    var array = [];
+                    $("input:checked").each(function() {
+                        array.push($(this).val());
+                    });
+                    $('#display').text(array);
+                });
+        </script>
+        </body>
 
 </html>

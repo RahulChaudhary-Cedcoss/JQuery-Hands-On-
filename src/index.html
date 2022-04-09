@@ -8,12 +8,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <script>
-    $(document).on("click", function(event){
-    alert(event.target.className);
-});
+    $(function () {
+            $("#btnAdd").click(function () {
+                var option = $("<option />");
+                option.html($("#txtText").val());
+                $("#ID1").append(option);
+            });
+        });
+    
 </script>
 <body>
-    <p class="This is my class 1">Paragraph 1</p>
-    <p class="This is my class 2">Paragraph 2</p>
+    Text: <input type="text" id = "txtText" />
+    <input type="button" id = "btnAdd" value = "Add" />
+    <select id = "ID1"></select>
 </body>
 </html>

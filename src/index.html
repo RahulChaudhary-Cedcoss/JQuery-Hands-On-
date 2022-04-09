@@ -8,34 +8,42 @@
     <title>JQuery Hands-On</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
-        button {
-            margin-top: 20px;
-        }
+       
     </style>
 </head>
+<body>
+    <script>
+        $(document).ready(function(){
+  $("#btn1").click(function(){
+    $(".test").remove();
+     });
+     $("#btn2").click(function(){
+    $(".demo").remove();
+ 
+});
+});
 
-    <body style="text-align:center;" id="body">
-    
-        <input type="checkbox" name="type" value="Element 1" /> Element 1:
-        <input type="checkbox" name="type" value="Element 2" /> Element 2:
-        <input type="checkbox" name="type" value="Element 3" /> Element 3:
-        <input type="checkbox" name="type" value="Element 4" />Element 4:
-        <br>
-        <button>
-            click me
-        </button>
-        <p id="display">
-        </p>
-        <script>
-    
-            $('button').on('click', function() {
-                    var array = [];
-                    $("input:checked").each(function() {
-                        array.push($(this).val());
-                    });
-                    $('#display').text(array);
-                });
-        </script>
-        </body>
+    </script>
+    <div class="test">This is div for Test</div>
+    <div class="test">This is div for Test</div>
+    <div class="test">This is div for Test</div>
+    <div class="demo">This is div for Demo</div>
+    <div class="demo">This is div for Demo</div>
+    <div>This is Empty Div</div>
+    <div class="demo">This is div for Demo</div>
+    <div class="demo">This is div for Demo</div>
+    <div class="demo">This is div for Demo</div>
+    <div class="demo">This is div for Demo</div>
+    <div class="test">This is div for Test</div>
+    <div class="test">This is div for Test</div>
+    <div class="test">This is div for Test</div>
+    <div>This is Empty Div</div>
+    <div class="demo"></div>
+    <div class="test">This is div for Test</div>
+    <div>This is Empty Div</div><br>
 
+    <button id="btn1">Button 1</button>
+<button id="btn2">Button 2</button>
+
+</body>
 </html>
